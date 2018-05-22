@@ -1,19 +1,20 @@
 package edu.hanover.cs323_stephaniehannahproject;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 
-public class WelcomeActivity extends AppCompatActivity {
+public class WelcomeActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
     }
-    public void onClickNextWelcome(View view){
-        startActivity(new Intent(WelcomeActivity.this, DeviceActivity.class));
+    public void onClickNextWelcome(View v){
+        Intent intent = new Intent (this, DeviceActivity.class);
+        startActivity(intent);
         //click button to go to next page
     }
 }

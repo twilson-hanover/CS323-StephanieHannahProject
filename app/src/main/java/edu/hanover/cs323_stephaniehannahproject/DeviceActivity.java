@@ -1,9 +1,9 @@
 package edu.hanover.cs323_stephaniehannahproject;
 
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
 import android.os.Bundle;
 
-public class DeviceActivity extends AppCompatActivity {
+public class DeviceActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
