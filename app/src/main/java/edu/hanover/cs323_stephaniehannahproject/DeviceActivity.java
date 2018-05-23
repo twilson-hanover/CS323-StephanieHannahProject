@@ -1,34 +1,49 @@
 package edu.hanover.cs323_stephaniehannahproject;
 
-import android.app.Activity;
+import android.app.ListActivity;
 import android.os.Bundle;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.view.View;
 import android.content.Intent;
 
 
-public class DeviceActivity extends Activity {
+public class DeviceActivity extends ListActivity {
+    public static final String device_option = "deviceNo";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_device);
-    }
-    AdapterView.OnItemClickListener itemClickListener =
-            new AdapterView.OnItemClickListener(){
-                public void onItemClick(AdapterView<?> listView,
-                                        View v,
-                                        int position,
-                                        long id) {
-                    if (position == 0) {
-                        Intent intent = new Intent(DeviceActivity.this,
-                                WelcomeActivity.class);
-                        startActivity(intent);
-                    }
+//        int deviceNo = (Integer) getIntent().getExtras().get(device_option);
+//        Device devices = Device.devices[deviceNo];
+//        AdapterView.OnItemClickListener itemClickListener =
+//                new AdapterView.OnItemClickListener() {
+//                    public void onItemClick(AdapterView<?> listView,
+//                                            View v,
+//                                            int position,
+//                                            long id) {
+//                        if (position == 0) {
+//                            Intent intent = new Intent(DeviceActivity.this,
+//                                    ProblemActivity.class);
+//                            startActivity(intent);
+//                        }
+//                    }
+        ListView listDevices = getListView();
+        ArrayAdapter<Device> listAdapter = new ArrayAdapter<Device>(
+                this, android.R.layout.simple_list_item_1, Device.devices);
+        listDevices.setAdapter(listAdapter);
                 }
-            };
-    //Add the listener to the list view
-//    ListView listView = (ListView) findViewById(R.id.list_options);
-//    listView.setOnItemClickListener(itemClickListener);
+        //Add the listener to the list view
+//        ListView listView = (ListView) findViewById(R.id.list);
+//        listView.setOnItemClickListener(itemClickListener);
+//    }
+    @Override
+    public void onListItemClick(ListView listView,
+                                View itemView, int position, long id) {
+        Intent intent = new Intent(DeviceActivity.this, ProblemActivity.class);
+        intent.putExtra(DeviceActivity.device_option, (int) id);
+        startActivity(intent);
+    }
 }
