@@ -19,6 +19,12 @@ public class ProblemActivity extends Activity {
 //        listDevices.setAdapter(listAdapter);
     }
 
+    public void onClickNextProblem(View v){
+        Intent intent = new Intent (this, DeviceActivity.class);
+        startActivity(intent);
+        //click button to go to next page
+    }
+
 //    @Override
 //    public void onListItemClick(ListView listView,
 //                                View itemView, int position, long id) {
