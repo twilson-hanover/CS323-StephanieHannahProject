@@ -86,4 +86,10 @@
         android:layout_marginBottom="54dp"
         android:text="Submit" />
 
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="11dp"
+        android:src="@drawable/hanoverlogo" />
 </RelativeLayout>
