@@ -20,7 +20,7 @@ public class ProblemActivity extends Activity {
     }
 
     public void onClickNextProblem(View v){
-        Intent intent = new Intent (this, DeviceActivity.class);
+        Intent intent = new Intent (this, ContactActivity.class);
         startActivity(intent);
         //click button to go to next page
     }

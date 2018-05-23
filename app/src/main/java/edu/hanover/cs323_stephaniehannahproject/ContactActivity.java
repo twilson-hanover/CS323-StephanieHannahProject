@@ -1,9 +1,9 @@
 package edu.hanover.cs323_stephaniehannahproject;
 
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
 import android.os.Bundle;
 
-public class ContactActivity extends AppCompatActivity {
+public class ContactActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
