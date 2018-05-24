@@ -1,8 +1,10 @@
 package edu.hanover.cs323_stephaniehannahproject;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 
 public class ContactActivity extends Activity {
@@ -11,6 +13,8 @@ public class ContactActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact);
+        ActionBar actionBar = getActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
     }
 
     public void onClickService(View view) {
@@ -18,5 +22,11 @@ public class ContactActivity extends Activity {
         intent.putExtra(MyIntentService.EXTRA_MESSAGE,
                 getResources().getString(R.string.button_response));
         startService(intent);
+    }
+    public boolean onOptionsItemSelected(MenuItem item){
+        Intent myIntent = new Intent(getApplicationContext(), ProblemActivity.class);
+        startActivityForResult(myIntent, 0);
+        return true;
+
     }
 }

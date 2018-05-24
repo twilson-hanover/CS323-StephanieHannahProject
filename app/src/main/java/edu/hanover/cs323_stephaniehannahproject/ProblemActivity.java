@@ -1,7 +1,9 @@
 package edu.hanover.cs323_stephaniehannahproject;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.view.View;
@@ -17,12 +19,20 @@ public class ProblemActivity extends Activity {
 //        ArrayAdapter<Device> listAdapter = new ArrayAdapter<Device>(
 //                this, android.R.layout.simple_list_item_1, Device.devices);
 //        listDevices.setAdapter(listAdapter);
+        ActionBar actionBar = getActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
     }
 
     public void onClickNextProblem(View v){
         Intent intent = new Intent (this, ContactActivity.class);
         startActivity(intent);
         //click button to go to next page
+    }
+    public boolean onOptionsItemSelected(MenuItem item){
+        Intent myIntent = new Intent(getApplicationContext(), DeviceActivity.class);
+        startActivityForResult(myIntent, 0);
+        return true;
+
     }
 
 //    @Override
