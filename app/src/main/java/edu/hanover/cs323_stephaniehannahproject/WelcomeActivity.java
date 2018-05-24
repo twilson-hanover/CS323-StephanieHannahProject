@@ -17,4 +17,5 @@ public class WelcomeActivity extends Activity {
         startActivity(intent);
         //click button to go to next page
     }
+
 }
