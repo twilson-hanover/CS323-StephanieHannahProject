@@ -1,16 +1,16 @@
 package edu.hanover.cs323_stephaniehannahproject;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
+import android.content.Intent;
 import android.view.View;
 
-public class ContactActivity extends Activity {
+public class ServiceActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_contact);
+        setContentView(R.layout.activity_service);
     }
 
     public void onClickService(View view) {

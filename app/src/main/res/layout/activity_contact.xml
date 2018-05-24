@@ -84,6 +84,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="54dp"
+        android:onClick="onClickService"
         android:text="Submit" />
 
     <ImageView
