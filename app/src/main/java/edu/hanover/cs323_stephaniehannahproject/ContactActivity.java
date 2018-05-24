@@ -28,6 +28,11 @@ public class ContactActivity extends Activity {
         intent.putExtra(MyIntentService.EXTRA_MESSAGE,
                 getResources().getString(R.string.button_response));
         startService(intent);
+
+        Intent stephhan = new Intent (this, SHActivity.class);
+        startActivity(stephhan);
+//        Intent reset = new Intent (this, WelcomeActivity.class);
+//        startActivity(reset);
     }
     public boolean onOptionsItemSelected(MenuItem item){
         Intent myIntent = new Intent(getApplicationContext(), ProblemActivity.class);

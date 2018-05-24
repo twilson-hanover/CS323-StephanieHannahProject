@@ -5,8 +5,8 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
@@ -18,18 +18,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DeviceActivity"
-            android:label="IT Services"/>
-        <activity android:name=".ProblemActivity"
-            android:label="IT Services"/>
-        <activity android:name=".ContactActivity"
-            android:label="IT Services"/>
+        <activity
+            android:name=".DeviceActivity"
+            android:label="IT Services" />
+        <activity
+            android:name=".ProblemActivity"
+            android:label="IT Services" />
+        <activity
+            android:name=".ContactActivity"
+            android:label="IT Services" />
 
         <service
             android:name=".MyIntentService"
             android:exported="false" />
 
-        <activity android:name=".ServiceActivity"></activity>
+        <activity android:name=".ServiceActivity" />
+        <activity android:name=".SHActivity"
+            android:label="IT Services"></activity>
     </application>
 
 </manifest>
