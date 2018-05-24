@@ -38,6 +38,7 @@ public class DeviceActivity extends ListActivity {
         ArrayAdapter<Device> listAdapter = new ArrayAdapter<Device>(
                 this, android.R.layout.simple_list_item_1, Device.devices);
         listDevices.setAdapter(listAdapter);
+
         ActionBar actionBar = getActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
                 }
