@@ -33,7 +33,6 @@ public class MyIntentService extends IntentService {
         showText(text);
     }
     private void showText(final String text) {
-//        Log.v("MyIntentService", "The message is: " + text);
         handler.post(new Runnable() {
             @Override
             public void run() {
